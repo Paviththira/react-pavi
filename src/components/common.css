@@ -1,0 +1,51 @@
+.text-center{
+    text-align: center;
+}
+.business-name{
+    font-family: 'made_bon_voyageregular' !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    color: #454545;
+}
+.header-image{
+    width: 100%;
+}
+.banner_text {
+    position: absolute;
+    bottom: 208px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    z-index: 1;
+}
+.banner_text h4 {
+    font-size: 30px;
+    margin-bottom: 0;
+    font-family: 'Stone Serif ITC Pro';
+    font-weight: 500;
+}
+.banner_text p.banner_txt {
+    font-size: 1.3em;
+    font-family: 'Futura Bk BT', sans-serif;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeSpeed;
+}
+.banner_text a.img_link {
+    background: #fff;
+    padding: 11px 20px;
+    font-size: 14px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    margin: 5px;
+    letter-spacing: 0.3em;
+    color: #000;
+    border-radius: 3px;
+    line-height: 1.48;
+}

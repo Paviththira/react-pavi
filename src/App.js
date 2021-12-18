@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Services from './components/pages/Services';
@@ -9,6 +9,7 @@ import SignUp from './components/pages/SignUp';
 import Marketing from './components/pages/Marketing';
 import Consulting from './components/pages/Consulting';
 import Home from './components/home/Home'
+import Footer  from './components/footer/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/marketing' element={Marketing} />
         <Route exact path='/consulting' element={Consulting} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

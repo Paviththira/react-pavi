@@ -1,6 +1,14 @@
 import Head from 'next/head';
 import { Box, Container, Grid } from '@mui/material';
 import { Budget } from '../Budget';
+import SwipeableTextMobileStepper from '../slider/Slider';
+import FadeIn from 'react-fade-in';
+import '../common.css';
+import { AppConst } from '../../AppsConst/AppsConst';
+import Divider from '@mui/material/Divider';
+const product = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+
 const Home = () => (
   <>
     <Head>
@@ -12,87 +20,67 @@ const Home = () => (
       component="main"
       sx={{
         flexGrow: 1,
-        py: 8
+        py: 2
       }}
     >
       <Container maxWidth={false}>
         <Grid
           container
-          spacing={3}
+          spacing={0}
         >
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
-            <Budget />
+          <Grid item xs={12} sm={12} lg={12} xl={12}>
+            <SwipeableTextMobileStepper />
+            <div className="banner_text">
+                <h4>{AppConst.businessInfo.name}</h4>
+                <p className="banner_txt">{AppConst.businessInfo.location}</p>
+                <a className="img_link" title="Shop Now" href="https://bridaltrunk.co.uk/designer/vvani-vats/">Shop Now</a>
+              </div>
           </Grid>
-          <Grid
-            item
-            xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
-          >
-            {/* <TotalCustomers /> */}
+          <Grid item xs={12} sm={12} lg={12} xl={12} className='text-center' pb={4}>
+            <h2 className='business-name'>
+              {AppConst.businessInfo.name}
+            </h2>
+            <Divider variant="inset" />
           </Grid>
-          <Grid
-            item
-            xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
-          >
-            {/* <TasksProgress /> */}
+          {/* {product.map((index) => (
+            <Grid item lg={3} sm={6} xl={3} xs={12}>
+              <FadeIn>
+                <Budget />
+              </FadeIn>
+            </Grid>
+          ))} */}
+
+          <Grid item lg={6} sm={6} xl={6} xs={12}>
+            <div className='bs-banner_second'>
+              <img src="https://bridaltrunk.co.uk/pub/media/wysiwyg/vv3.jpg" alt="" className='header-image' />
+
+              {/* <div className="banner_text">
+                <h4>VVANI VATS</h4>
+                <p className="banner_txt">CHAND</p>
+                <a className="img_link" title="Shop Now" href="https://bridaltrunk.co.uk/designer/vvani-vats/">Shop Now</a>
+              </div> */}
+
+            </div>
+
+
+
           </Grid>
-          <Grid
-            item
-            xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
-          >
-            {/* <TotalProfit sx={{ height: '100%' }} /> */}
+          <Grid item lg={6} sm={6} xl={6} xs={12}>
+
+            <div className='bs-banner_second'>
+              <img src="https://bridaltrunk.co.uk/pub/media/wysiwyg/pdp2.jpg" alt="" className='header-image' />
+              {/* <div className="banner_text">
+                <h4>VVANI VATS</h4>
+                <p className="banner_txt">CHAND</p>
+                <a className="img_link" title="Shop Now" href="https://bridaltrunk.co.uk/designer/vvani-vats/">Shop Now</a>
+              </div> */}
+            </div>
+
+
           </Grid>
-          <Grid
-            item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
-            {/* <Sales /> */}
-          </Grid>
-          <Grid
-            item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
-            {/* <TrafficByDevice sx={{ height: '100%' }} /> */}
-          </Grid>
-          <Grid
-            item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
-            {/* <LatestProducts sx={{ height: '100%' }} /> */}
-          </Grid>
-          <Grid
-            item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
-            {/* <LatestOrders /> */}
-          </Grid>
+
         </Grid>
+
       </Container>
     </Box>
   </>
